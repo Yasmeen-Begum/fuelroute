@@ -62,6 +62,8 @@ python manage.py load_fuel_data
 ```
 python manage.py runserver
 ```
+Starting development server at http://127.0.0.1:8000/
+
 ## API Usage
 -Endpoint
 ```
