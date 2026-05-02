@@ -88,4 +88,68 @@ Example Response
 }
 ```
 
-
+1. Plan a Route (New York → Chicago)
+```
+POST http://127.0.0.1:8000/route/
+```
+Body (JSON):
+```
+{
+  "start": [-74.006, 40.7128],
+  "finish": [-87.6298, 41.8781]
+}
+```
+Expected Response (simplified)
+```
+{
+  "route": { "distance_miles": 790, "map_url": "https://..." },
+  "fuel_stops": [
+    {"station": "Shell NY", "location": [40.7, -74.0], "cost": 150.25},
+    {"station": "BP OH", "location": [41.0, -82.0], "cost": 120.75}
+  ],
+  "total_cost": 271.00
+}
+```
+2. Plan a Route (Los Angeles → San Francisco)
+```
+POST http://127.0.0.1:8000/route/
+```
+Body (JSON):
+```
+{
+  "start": [-118.2437, 34.0522],
+  "finish": [-122.4194, 37.7749]
+}
+```
+Expected Response (simplified)
+```
+{
+  "route": { "distance_miles": 380, "map_url": "https://..." },
+  "fuel_stops": [
+    {"station": "Chevron LA", "location": [34.05, -118.24], "cost": 120.00}
+  ],
+  "total_cost": 120.00
+}
+```
+3. Plan a Route (Dallas → Denver)
+```
+POST http://127.0.0.1:8000/route/
+```
+Body (JSON):
+```
+{
+  "start": [-96.7970, 32.7767],
+  "finish": [-104.9903, 39.7392]
+}
+```
+Expected Response (simplified)
+```
+{
+  "route": { "distance_miles": 780, "map_url": "https://..." },
+  "fuel_stops": [
+    {"station": "Exxon OK", "location": [35.5, -97.5], "cost": 140.50},
+    {"station": "Shell CO", "location": [39.0, -104.8], "cost": 130.75}
+  ],
+  "total_cost": 271.25
+}
+```
