@@ -21,7 +21,7 @@ The API returns:
 
 ---
 
-## 📦 Requirements
+##  Requirements
 - Python ≥ 3.11
 - Django ≥ 5.x
 - Django REST Framework
