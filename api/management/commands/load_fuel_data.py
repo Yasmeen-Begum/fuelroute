@@ -8,7 +8,7 @@ class Command(BaseCommand):
     help = "Load fuel stations from CSV"
 
     def handle(self, *args, **kwargs):
-        df = pd.read_csv("C:/Users/DELL/Music/internshala/spot/fuelroute/api/management/commands/fuel-prices-for-be-assessment.csv")
+        df = pd.read_csv("C:/Users/DELL/Music/internshala/spot/fuelroute/api/management/commands/fuel-prices-for-be-assessment.csv") # use csv file path fuel-prices-for-be-assessment.csv
         for _, row in df.iterrows():
             FuelStation.objects.create(
                 name=row["Truckstop Name"],
