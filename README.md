@@ -29,10 +29,7 @@ The API returns:
 - requests
 - openrouteservice
 
-Install dependencies:
-```
-pip install -r requirements.txt
-```
+
 ## Setup
 - Clone the repo
 ```
@@ -44,6 +41,10 @@ cd fuelroute
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
+```
+Install dependencies:
+```
+pip install -r requirements.txt
 ```
 - Run migrations
 ```
